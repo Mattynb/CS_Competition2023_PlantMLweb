@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Image Classification</title>
+    <style>
+        /* Add custom styles here */
+        body {
+            background-color: #f5f5f5;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #FFF;
+            text-align: center;
+            padding: 20px;
+        }
+        header a {
+            color: #FFF;
+            text-decoration: none;
+        }
+        header ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        header ul li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+        header ul li:last-child {
+            margin-right: 0;
+        }
+        header nav {
+            display: inline-block;
+        }
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px;
+            background-color: #FFF;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            margin:auto;
+            vertical-align:middle;
+            horizontal-align:middle;
+            font-size: 36px;
+            margin-top: 0;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 40px;
+        }
+        input[type="file"] {
+            margin-bottom: 20px;
+            font-size: 18px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            background-color: #FFF;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        button[type="submit"] {
+            background-color: #333;
+            color: #FFF;
+            font-size: 18px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+        button[type="submit"]:hover {
+            background-color: #FFF;
+            color: #333;
+        }
+        p#result {
+            font-size: 24px;
+            margin-top: 40px;
+        }
+    </style>
+    <script src="submit_script.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/">Home</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Image Classification</h1>
+            <form method="post" enctype="multipart/form-data" action="/predict">
+            <input type="file" name="image">
+            <button type="submit">Predict</button>
+        </form>
+        <p id="result"></p>
+    </main>
+</body>
+</html>
