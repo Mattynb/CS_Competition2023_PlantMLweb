@@ -8,9 +8,9 @@ import numpy as np
 from queue import PriorityQueue
 import json
 
-train_dir = r'C:\Users\nasci\OneDrive\Desktop\CS Projects\Python\PlatRecognitionChallenge\ML\plantnet_300K\images_train'
-val_dir = r'C:\Users\nasci\OneDrive\Desktop\CS Projects\Python\PlatRecognitionChallenge\ML\plantnet_300K\images_val'
-test_dir = r'C:\Users\nasci\OneDrive\Desktop\CS Projects\Python\PlatRecognitionChallenge\ML\plantnet_300K\images_test'
+train_dir = r'...\plantnet_300K\images_train'
+val_dir = r'...\plantnet_300K\images_val'
+test_dir = r'...\plantnet_300K\images_test'
 
 app = Flask(__name__)
 
@@ -71,7 +71,7 @@ def test():
             
 
 
-with open(r"C:\Users\nasci\OneDrive\Desktop\CS Projects\Python\PlatRecognitionChallenge\ML\plantnet_300K\plantnet300K_species_names.json") as f:
+with open(r"...\plantnet_300K\plantnet300K_species_names.json") as f:
     data = json.load(f)
     
 species = {}
@@ -80,7 +80,7 @@ for key, value in data.items():
 
 
 if __name__ == '__main__':
-    model = load_model(r"C:\Users\nasci\OneDrive\Desktop\CS Projects\Python\PlatRecognitionChallenge\Model\models\plant_species.h5")
+    model = load_model(r"...\plant_species.h5")
     
     app.run(host='127.0.0.1', port=5000, debug=True)
     #test()
